@@ -32,10 +32,12 @@ def execute(q, p=()):
 # -------- INIT DB --------
 def init_db():
 
-    CREATE TABLE IF NOT EXISTS elections(
+   execute("""
+   CREATE TABLE IF NOT EXISTS elections(
     id SERIAL PRIMARY KEY,
     name TEXT
-)
+   )
+   """)
     execute("""
     CREATE TABLE IF NOT EXISTS voters(
         id SERIAL PRIMARY KEY,
