@@ -38,7 +38,7 @@ def init_db():
 )
     execute("""
     CREATE TABLE IF NOT EXISTS voters(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         name TEXT,
         unique_id TEXT,
         has_voted INTEGER DEFAULT 0,
@@ -49,7 +49,7 @@ def init_db():
 
     execute("""
     CREATE TABLE IF NOT EXISTS candidates(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         name TEXT,
         position TEXT,
         photo TEXT,
@@ -59,7 +59,7 @@ def init_db():
 
     execute("""
     CREATE TABLE IF NOT EXISTS duty_users(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         username TEXT,
         password TEXT
     )
@@ -67,7 +67,7 @@ def init_db():
 
     execute("""
     CREATE TABLE IF NOT EXISTS votes(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         voter_id INTEGER,
         candidate_id INTEGER,
         position TEXT,
@@ -77,7 +77,7 @@ def init_db():
 
     execute("""
     CREATE TABLE IF NOT EXISTS phases(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         name TEXT,
         total_voters INTEGER,
         election_id INTEGER
@@ -86,7 +86,7 @@ def init_db():
 
     execute("""
     CREATE TABLE IF NOT EXISTS positions(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         name TEXT,
         winners_count INTEGER,
         election_id INTEGER
@@ -95,7 +95,7 @@ def init_db():
 
     execute("""
     CREATE TABLE IF NOT EXISTS evm_status(
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         voter_id INTEGER,
         active INTEGER
     )
