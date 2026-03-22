@@ -8,9 +8,9 @@ if DATABASE_URL:
     conn = psycopg2.connect(DATABASE_URL)
 else:
     conn = psycopg2.connect(
-        dbname="your_db",
+        dbname="election",
         user="postgres",
-        password="your_password",
+        password="1234",
         host="localhost"
     )
 
