@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black flex items-center justify-center h-screen">
+
+<h1 id="status" class="text-white text-3xl">
+Waiting for Voter...
+</h1>
+
+<script>
+
+// 🔁 CHECK EVERY 2 SECONDS
+setInterval(async () => {
+
+    let res = await fetch("/evm_check");
+    let data = await res.json();
+
+    if(data.status === "go"){
+        window.location.href = "/evm_vote/" + data.voter_id;
+    }
+
+}, 2000);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+<h2 class="text-xl mb-4">Search Voter</h2>
+
+<form method="POST">
+  <input name="uid" placeholder="Enter Voter ID" class="border p-2">
+  <button class="bg-blue-600 text-white px-4 py-2">Search</button>
+</form>
+
+{% if data %}
+<div class="bg-white p-4 mt-4 shadow">
+  <p><b>ID:</b> {{data[1]}}</p>
+  <p><b>Voted:</b> {{data[2]}}</p>
+  <p><b>Phase ID:</b> {{data[3]}}</p>
+</div>
+{% endif %}
+
+</body>
+</html>

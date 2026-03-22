@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black flex justify-center items-center h-screen">
+
+<div class="text-center">
+
+<!-- SINGLE ANIMATED CHECK -->
+<div class="animate-bounce text-green-500 text-8xl mb-4">
+✔
+</div>
+
+<!-- TEXT -->
+<h1 class="text-white text-4xl font-bold mb-2">
+VOTE SUCCESSFUL
+</h1>
+
+<p class="text-gray-400 text-lg">
+Your vote has been recorded securely
+</p>
+
+</div>
+
+<!-- SOUND -->
+<audio autoplay>
+  <source src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
+</audio>
+
+<!-- AUTO REDIRECT -->
+<script>
+setTimeout(()=>{
+  window.location.href="/evm";
+},2000);
+</script>
+
+</body>
+</html>

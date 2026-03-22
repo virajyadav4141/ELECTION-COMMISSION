@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+<h2 class="text-xl mb-4">Phase Statistics</h2>
+
+<table class="w-full border">
+<tr class="bg-blue-700 text-white">
+  <th class="p-2">Phase</th>
+  <th>Total Voters</th>
+  <th>Votes Cast</th>
+</tr>
+
+{% for d in data %}
+<tr class="text-center border">
+  <td>{{d[0]}}</td>
+  <td>{{d[1]}}</td>
+  <td>{{d[2] or 0}}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

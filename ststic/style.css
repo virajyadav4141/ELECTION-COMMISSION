@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #020617;
+  position: fixed;
+  padding: 20px;
+}
+
+.main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+input, select {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px;
+  background: #22c55e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.candidate {
+  display: inline-block;
+  background: #1e293b;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+}

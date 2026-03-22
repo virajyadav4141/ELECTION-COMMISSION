@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black flex items-center justify-center h-screen">
+
+<div class="bg-slate-900 p-6 rounded w-96 text-center shadow-lg">
+
+  <h2 class="text-white text-xl mb-4">Voter Verification</h2>
+
+  <form method="POST">
+
+    <input name="uid" placeholder="Enter Voter ID"
+      class="w-full p-2 mb-3 text-black rounded">
+
+    <button class="bg-blue-600 w-full py-2 text-white rounded mb-3 hover:bg-blue-700">
+      Verify
+    </button>
+
+  </form>
+
+  <button onclick="window.open('/evm','_blank')"
+    class="bg-green-600 w-full py-2 text-white rounded hover:bg-green-700">
+    Open EVM Machine
+  </button>
+
+</div>
+
+</body>
+</html>
