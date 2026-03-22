@@ -105,7 +105,8 @@ def init_db():
     ON CONFLICT (id) DO NOTHING
     """)
 
-    conn.autocommit = True
+    conn.commit()
+
 
 init_db()
 
