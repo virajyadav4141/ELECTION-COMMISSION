@@ -23,6 +23,7 @@ app = Flask(__name__)
 app.secret_key = "secret123"
 DATABASE_URL = os.environ.get("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL)
+conn.autocommit = True
 cur = conn.cursor()
 
 def execute(q, p=()):
